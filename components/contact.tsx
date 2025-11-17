@@ -34,23 +34,23 @@ export function Contact() {
   
   // 기본 데이터
   const defaultInfo = {
-    name: "당신의 이름",
-    title: "직책/직무",
+    name: "황성희",
+    title: "단국대학교 학생",
     company: "",
-    experience: "3년 경력",
-    phone: "010-0000-0000",
-    email: "your-email@example.com",
-    website: "",
-    location: "당신의 위치",
+    experience: "3학년",
+    phone: "010-7222-8706",
+    email: "allisonhsh@naver.com",
+    website: "https://hwang-com.vercel.app/",
+    location: "경기도 용인시",
     workTime: "평일 09:00 - 18:00",
-    responseTime: "24시간 이내 응답",
+    responseTime: "12시간 이내 응답",
     sectionTitle: "연락처",
     sectionSubtitle: "프로젝트 문의나 협업 제안을 기다리고 있습니다. 편하신 방법으로 연락주세요!",
     qrTitle: "QR 코드로 연락처 저장",
     qrSubtitle: "스캔하면 연락처가 자동으로 저장됩니다",
     bottomMessage: "함께 성장하는 파트너가 되겠습니다.",
     bottomSubMessage: "고객님의 성공적인 프로젝트를 위해 최선을 다하겠습니다.",
-    qrContent: ["name","phone","email","location","website"],
+    qrContent: ["name","phone","website"],
     profileEmoji: "👤",
     background: {"image":"","video":"","color":"","opacity":0.1}
   }
