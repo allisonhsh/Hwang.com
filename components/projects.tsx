@@ -8,6 +8,7 @@ import { EditableMedia } from "@/components/editable/editable-media"
 import { EditableBackground } from "@/components/editable/editable-background"
 import { useInlineEditor } from "@/contexts/inline-editor-context"
 import { COMMON_STYLES } from "@/lib/constants"
+import { motion } from "framer-motion"
 
 export function Projects() {
   const { getData, saveData, isEditMode, saveToFile } = useInlineEditor()
@@ -233,8 +234,12 @@ export function Projects() {
               {visibleProjects.map((project, index) => {
                 
                 return (
-                  <div 
+                  <motion.div 
                     key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="group flex flex-col relative cursor-pointer"
                     onClick={() => !isEditMode && setSelectedImage(project.video || project.image)}
                   >
@@ -292,7 +297,7 @@ export function Projects() {
                         />
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 )
               })}
               

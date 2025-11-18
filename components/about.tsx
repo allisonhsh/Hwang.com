@@ -9,6 +9,7 @@ import { EditableMedia } from "@/components/editable/editable-media"
 import { EditableBackground } from "@/components/editable/editable-background"
 import { useInlineEditor } from "@/contexts/inline-editor-context"
 import { COMMON_STYLES } from "@/lib/constants"
+import { motion } from "framer-motion"
 
 // 사용 가능한 아이콘들 - 경험 카드용
 const AVAILABLE_ICONS = {
@@ -100,7 +101,7 @@ export function About() {
     subtitle: "당신의 전문성과 열정을 소개해주세요.",
     background: {"image":"","video":"","color":"","opacity":0.1},
     experienceCards: [{"icon":"graduation","title":"단국대학교","period":"2023 - 현재","description":"도시계획부동산학부"},{"icon":"award","title":"자격증/수상","period":"2023","description":"토익"}],
-    skills: [{"icon":"barChart","title":"통계 활용 데이터 분석","description":"React, TypeScript, Next.js를 활용한 모던 웹 개발"},{"icon":"pieChart","title":"시각화","description":"엑셀 활용 통계 데이터 시각화"},{"icon":"shield","title":"신뢰성","description":"맡은 일은 최선을 다해 반드시 수행"}],
+    skills: [{"icon":"barChart","title":"통계 활용 데이터 분석","description":"다양한 부동산 관련 통계 자료를 활용한 데이터 분석"},{"icon":"pieChart","title":"시각화","description":"엑셀 활용 통계 데이터 시각화"},{"icon":"shield","title":"신뢰성","description":"맡은 일은 최선을 다해 반드시 수행"}],
     storyTitle: "나의 이야기",
     story: ["저는 기술을 통해 사람들의 삶을 더 편리하고 의미 있게 만드는 일에 열정을 가지고 있습니다.","다양한 프로젝트를 통해 문제 해결 능력과 창의적인 사고를 키워왔으며, 팀원들과의 협업을 통해 함께 성장하는 가치를 배웠습니다.","앞으로도 지속적인 학습과 도전을 통해 더 나은 개발자가 되기 위해 노력하겠습니다."],
     storyImage: "",
@@ -244,7 +245,14 @@ export function About() {
             {aboutInfo.experienceCards?.map((card, index) => {
               const Icon = AVAILABLE_ICONS[card.icon as keyof typeof AVAILABLE_ICONS] || Briefcase
               return (
-                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 relative">
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 relative">
                   <CardContent className="p-6">
                     {isEditMode && (
                       <button
@@ -284,6 +292,7 @@ export function About() {
                     </div>
                   </CardContent>
                 </Card>
+                </motion.div>
               )
             })}
             
@@ -301,6 +310,9 @@ export function About() {
             )}
           </div>
 
+
+
+          
           {/* 핵심 역량 */}
           {(aboutInfo.skills.length > 0 || isEditMode) && (
             <div className="mb-16">
@@ -311,7 +323,14 @@ export function About() {
                 {aboutInfo.skills.map((skill, index) => {
                   const Icon = SKILL_ICONS[skill.icon as keyof typeof SKILL_ICONS] || Trophy
                   return (
-                    <div key={index} className="text-center relative">
+                    <motion.div
+                     key={index} 
+                     className="text-center relative"
+                     initial={{ opacity: 0, y: 30 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true, amount: 0.2 }}
+                     transition={{ duration: 0.6, delay: index * 0.1 }}
+                    >
                       {isEditMode && (
                         <button
                           onClick={() => removeSkill(index)}
@@ -338,7 +357,7 @@ export function About() {
                           multiline
                         />
                       </p>
-                    </div>
+                    </motion.div>
                   )
                 })}
                 {isEditMode && (
@@ -369,7 +388,15 @@ export function About() {
                     />
                   </h3>
                   {aboutInfo.story.map((paragraph, index) => (
-                    <div key={index} className="relative mb-4">
+                    <motion.div 
+                     key={index}
+                     className="relative mb-4"
+                     initial={{ opacity: 0, y: 30 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true, amount: 0.2 }}
+                     transition={{ duration: 0.6, delay: index * 0.1 }}
+                    >
+
                       {isEditMode && (
                         <button
                           onClick={() => removeStory(index)}
@@ -386,7 +413,7 @@ export function About() {
                           multiline
                         />
                       </p>
-                    </div>
+                    </motion.div>
                   ))}
                   {isEditMode && (
                     <button
