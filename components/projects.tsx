@@ -17,13 +17,8 @@ export function Projects() {
     subtitle: "프로젝트",
     initialDisplay: 6,
     loadMoreCount: 3,
-    background: {
-      image: "",
-      video: "",
-      color: "",
-      opacity: 0.1
-    },
-    projects: [] as Array<{ image: string; video?: string; title: string; description: string }>
+    background: {"image":"","video":"","color":"","opacity":0.1},
+    projects: [{"image":"/uploads/project-1763439420695-1763439422341.png","video":"","title":"개발 IM 프로젝트","description":"평택시 동삭동 라움프라자 신축사업의 PF의 개발 IM 작성"},{"image":"/uploads/project-1763439708666-1763439709685.png","video":"","title":"임장보고서","description":"성수동 생각공장 데시앙플렉스의 임장 후 보고서 작성"},{"image":"/uploads/project-1763440041749-1763440041909.png","video":"","title":"경매 권리분석 보고서","description":"경기도 수원시의 금곡엘지아파트 경매 권리분석보고서 작성"},{"image":"/uploads/project-1763440203083-1763440203160.png","video":"","title":"상가 임장활동 보고서","description":"종로구 낙원상가의 임장활동 후 보고서 작성"},{"image":"/uploads/project-1763440420869-1763440420976.png","video":"","title":"상업용지 도시개발사업의 이유와 사례연구","description":"일산 라페스타의 상권분석과 문제점, 향후 개발 방법 및 기대효과에 관한 연구 프로젝트"},{"image":"/uploads/project-1763440785358-1763440785907.png","video":"","title":"1주택 2가구 형태 연구","description":"다양한 형태로 변화하는 가구의 형태에 맞춰, 1주택 2가구 사례에 대한 연구 진행. 수익형 유닛 & 듀플렉스 하우스"},{"image":"/uploads/project-1763441148322-1763441148994.png","video":"","title":"불법 옥외 광고물의 현황 및 문제점과 개선방안","description":"도시계획과 부동산학적 측면에서 현시점의 문제점을 찾아보고 개선방안에 대한 연구 프로젝트"},{"image":"/uploads/project-1763441362594-1763441363276.png","video":"","title":"배달의 민족 기업 분석","description":"배달의 민족의 성공요인을 SWOT분석과 STP, 마케팅믹스(4p)을 활용하여 기업 분석연구"},{"image":"/uploads/project-1763441536903-1763441537527.png","video":"","title":"폴바셋 입지분석","description":"프렌차이즈 카페인 '폴바셋' 강남삼성타운점과 대치역점의 입지 및 수요공급의 비교분석을 통해 우수 입지 연구"}] as Array<{ image: string; video?: string; title: string; description: string }>
   }
 
   const [projectsInfo, setProjectsInfo] = useState(defaultInfo)

@@ -8,6 +8,7 @@ import { EditableText } from "@/components/editable/editable-text"
 import { EditableMedia } from "@/components/editable/editable-media"
 import { EditableBackground } from "@/components/editable/editable-background"
 import { useInlineEditor } from "@/contexts/inline-editor-context"
+import { motion } from "framer-motion"
 
 // 사용 가능한 아이콘 정의
 const AVAILABLE_ICONS = {
@@ -38,9 +39,9 @@ export function Hero() {
   const defaultInfo = {
     greeting: "안녕하세요,",
     name: "황성희",
-    title: "단국대 학생입니다",
+    title: "단국대학교 학생입니다",
     description: "프롭테크 기술로 부동산 시장을 분석합니다.",
-    profileImage: "/uploads/hero-profile-1761477237286.png",
+    profileImage: "/uploads/hero-profile-1763371076328.png",
     backgroundImage: "",
     backgroundVideo: "",
     backgroundOpacity: 0.1,
@@ -57,10 +58,8 @@ export function Hero() {
   // localStorage에서 데이터 로드 - 편집 모드가 변경될 때마다 실행
   useEffect(() => {
     const savedData = getData('hero-info') as typeof defaultInfo | null
-    if (savedData) {
-      setHeroInfo({ ...defaultInfo, ...savedData })
+    setHeroInfo({ ...defaultInfo, ...savedData })
       // background 데이터가 있으면 설정 (savedData에는 background 필드가 없음)
-    }
     
     const savedSocial = getData('hero-social-links') as { name: string; icon: string; url: string }[] | null
     if (savedSocial) {
@@ -71,7 +70,8 @@ export function Hero() {
     if (savedBg) {
       setBackgroundData(savedBg)
     }
-  }, [isEditMode]) // isEditMode가 변경될 때마다 데이터 다시 로드
+  }, [isEditMode]) 
+  
 
   const updateHeroInfo = (key: string, value: string) => {
     // 업데이트
@@ -248,17 +248,23 @@ export function Hero() {
             {/* 오른쪽: 프로필 이미지 */}
             <div className="order-1 md:order-2 flex justify-center">
               <div className="relative">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-muted overflow-hidden shadow-2xl">
-                  <EditableMedia
-                    src={heroInfo.profileImage}
-                    onChange={(src) => updateHeroInfo('profileImage', src)}
-                    type="image"
-                    storageKey="hero-profileImage"
-                    className="w-full h-full object-contain"
-                    alt="프로필"
-                    purpose="hero-profile"
-                  />
-                </div>
+                <motion.div
+                 className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-muted overflow-hidden shadow-2xl"
+                 initial={{ opacity: 0, y: -30 }}   // 처음 상태: 오른쪽에서
+                 animate={{ opacity: 1, y: 0 }}    // 나타날 때 상태
+                 transition={{ duration: 0.8, ease: "easeOut" }}  // 애니메이션 시간과 easing
+                  >
+
+                 <EditableMedia
+                  src={heroInfo.profileImage}
+                  onChange={(src) => updateHeroInfo('profileImage', src)}
+                  type="image"
+                  storageKey="hero-profileImage"
+                  className="w-full h-full object-contain"
+                  alt="프로필"
+                  purpose="hero-profile"
+                  />  
+                </motion.div>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none" />
               </div>
             </div>
@@ -270,6 +276,8 @@ export function Hero() {
           onClick={scrollToAbout}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
         >
+
+
           <ArrowDown className="h-6 w-6 text-muted-foreground" />
         </button>
       </section>
