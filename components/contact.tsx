@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/card"
 import { EditableText } from "@/components/editable/editable-text"
 import { EditableBackground } from "@/components/editable/editable-background"
 import { useInlineEditor } from "@/contexts/inline-editor-context"
+import { motion } from "framer-motion"
 
 // 사용 가능한 소셜 아이콘 정의
 const AVAILABLE_ICONS = {
