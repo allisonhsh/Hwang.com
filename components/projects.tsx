@@ -749,8 +749,4 @@ export function Projects() {
       )}
     </>
   )
-}/div>
-      )}
-    </>
-  )
 }
