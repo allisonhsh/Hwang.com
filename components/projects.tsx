@@ -15,11 +15,11 @@ export function Projects() {
   // 기본 데이터
   const defaultInfo = {
     title: "프로젝트",
-    subtitle: "프로젝트",
+    subtitle: "재무·입지·법적 분석을 포함한 부동산 종합 프로젝트입니다",
     initialDisplay: 6,
     loadMoreCount: 3,
     background: {"image":"","video":"","color":"","opacity":0.1},
-    projects: [{"image":"/uploads/project-1763439420695-1763439422341.png","video":"","title":"개발 IM 프로젝트","description":"평택시 동삭동 라움프라자 신축사업의 PF의 개발 IM 작성"},{"image":"/uploads/project-1763439708666-1763439709685.png","video":"","title":"임장보고서","description":"성수동 생각공장 데시앙플렉스의 임장 후 보고서 작성"},{"image":"/uploads/project-1763440041749-1763440041909.png","video":"","title":"경매 권리분석 보고서","description":"경기도 수원시의 금곡엘지아파트 경매 권리분석보고서 작성"},{"image":"/uploads/project-1763440203083-1763440203160.png","video":"","title":"상가 임장활동 보고서","description":"종로구 낙원상가의 임장활동 후 보고서 작성"},{"image":"/uploads/project-1763440420869-1763440420976.png","video":"","title":"상업용지 도시개발사업의 이유와 사례연구","description":"일산 라페스타의 상권분석과 문제점, 향후 개발 방법 및 기대효과에 관한 연구 프로젝트"},{"image":"/uploads/project-1763440785358-1763440785907.png","video":"","title":"1주택 2가구 형태 연구","description":"다양한 형태로 변화하는 가구의 형태에 맞춰, 1주택 2가구 사례에 대한 연구 진행. 수익형 유닛 & 듀플렉스 하우스"},{"image":"/uploads/project-1763441148322-1763441148994.png","video":"","title":"불법 옥외 광고물의 현황 및 문제점과 개선방안","description":"도시계획과 부동산학적 측면에서 현시점의 문제점을 찾아보고 개선방안에 대한 연구 프로젝트"},{"image":"/uploads/project-1763441362594-1763441363276.png","video":"","title":"배달의 민족 기업 분석","description":"배달의 민족의 성공요인을 SWOT분석과 STP, 마케팅믹스(4p)을 활용하여 기업 분석연구"},{"image":"/uploads/project-1763441536903-1763441537527.png","video":"","title":"폴바셋 입지분석","description":"프렌차이즈 카페인 '폴바셋' 강남삼성타운점과 대치역점의 입지 및 수요공급의 비교분석을 통해 우수 입지 연구"}] as Array<{ image: string; video?: string; title: string; description: string }>
+    projects: [{"image":"/uploads/project-1763439420695-1763439422341.png","video":"","title":"PF 개발 IM 프로젝트","description":"평택시 동삭동 라움프라자 신축사업의 PF의 개발 IM 작성하였습니다. 대상 사업의 수익률, 분양가, 총사업비 등을 기반으로 사업성 여부를 검토했습니다. 수익성 변동 요인을 비교하며 리스크 요인을 식별했고, 다양한 시나리오별 민감도 분석을 통해 안정적으로 사업이 운영될 수 있는 조건을 도출했습니다."},{"image":"/uploads/project-1763439708666-1763439709685.png","video":"","title":"성수동 임장 보고서","description":"전국 지식산업센터 거래가 급감한 상황에서도 성수 지역은 공실률 0%대와 임대료 상승을 유지해, 그 원인을 파악하기 위해 현장 임장을 진행했습니다.\n입지·상권·개발 호재를 검토하며 수요의 지속성을 분석하고, 역세권 거리·신축 경쟁 등 잠재 리스크까지 종합적으로 평가했습니다."},{"image":"/uploads/project-1763440041749-1763440041909.png","video":"","title":"경매 권리분석 보고서","description":"등기부·권리 순위를 검토해 인수 위험을 판단하고, 대출 조달 구조를 가정해 24개월 보유·매각 시 수익률을 계산했습니다.\n전세 운영 대비 매각 전략이 더 높은 수익성과 유동성을 확보한다는 결론을 도출하며 투자 의사결정안을 제시했습니다."}] as Array<{ image: string; video?: string; title: string; description: string }>
   }
 
   const [projectsInfo, setProjectsInfo] = useState(defaultInfo)
@@ -746,6 +746,10 @@ export function Projects() {
             </div>
           </div>
         </div>
+      )}
+    </>
+  )
+}/div>
       )}
     </>
   )

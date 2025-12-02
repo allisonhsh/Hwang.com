@@ -34,19 +34,18 @@ export function Hero() {
   const { getData, saveData, isEditMode, saveToFile, saveFieldToFile } = useInlineEditor()
   
   // 초기 데이터 - 배열 형태로 변경
-  const defaultSocialLinks = [{"name":"Instagram","icon":"instagram","url":"https://instagram.com/castl_j0y"},{"name":"YouTube","icon":"youtube","url":"https://youtube.com/@username"}]
+  const defaultSocialLinks = [{"name":"단국대학교","icon":"instagram","url":"https://www.instagram.com/dankook_univ/"},{"name":"KB부동산","icon":"globe","url":"https://kbland.kr/map?xy=37.5205559,126.9265729,17"}]
   
   const defaultInfo = {
-    greeting: "안녕하세요,",
+    greeting: "반갑습니다,",
     name: "황성희",
-    title: "단국대학교 학생입니다",
-    description: "프롭테크 기술로 부동산 시장을 분석합니다.",
+    title: "도시계획부동산학부 학생입니다",
+    description: "미래 도시의 방향을 설계하는 부동산 전략가입니다",
     profileImage: "/uploads/hero-profile-1763371076328.png",
     backgroundImage: "",
     backgroundVideo: "",
     backgroundOpacity: 0.1,
-    projectButton: "프로젝트 보기",
-    background: {"image":"","video":"","color":"","opacity":0.1}
+    projectButton: "프로젝트 보기"
   }
 
   const [backgroundData, setBackgroundData] = useState<{ image: string; video: string; color: string; opacity: number } | null>(null)
@@ -256,7 +255,7 @@ export function Hero() {
                   >
 
                  <EditableMedia
-                  src={heroInfo.profileImage}
+                  src={heroInfo.profileImage ?? ""}
                   onChange={(src) => updateHeroInfo('profileImage', src)}
                   type="image"
                   storageKey="hero-profileImage"

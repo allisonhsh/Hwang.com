@@ -30,7 +30,7 @@ export const defaultConfig = {
     showNavBar: true,
     showThemeToggle: true,
     items: [{"name":"Home","url":"#hero","icon":"Home","show":true},{"name":"About","url":"#about","icon":"User","show":true},{"name":"Projects","url":"#projects","icon":"Briefcase","show":true},{"name":"Contact","url":"#contact","icon":"Mail","show":true},{"name":"갤러리","url":"#gallery","icon":"Camera","show":false},{"name":"블로그","url":"#blog","icon":"Book","show":false}],
-    siteTitle: "My portfolio",
+    siteTitle: "32235002 황성희",
     siteDescription: "창의적인 아이디어로 웹 경험을 디자인합니다!"
   }
 

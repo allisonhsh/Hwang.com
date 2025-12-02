@@ -100,12 +100,12 @@ export function About() {
     title: "소개",
     subtitle: "당신의 전문성과 열정을 소개해주세요.",
     background: {"image":"","video":"","color":"","opacity":0.1},
-    experienceCards: [{"icon":"graduation","title":"단국대학교","period":"2023 - 현재","description":"도시계획부동산학부"},{"icon":"award","title":"자격증/수상","period":"2023","description":"토익"}],
-    skills: [{"icon":"barChart","title":"통계 활용 데이터 분석","description":"다양한 부동산 관련 통계 자료를 활용한 데이터 분석"},{"icon":"pieChart","title":"시각화","description":"엑셀 활용 통계 데이터 시각화"},{"icon":"shield","title":"신뢰성","description":"맡은 일은 최선을 다해 반드시 수행"}],
+    experienceCards: [{"icon":"graduation","title":"단국대학교 도시계획부동산학","period":"2023~","description":"부동산학과 전공 / 경영학과 복수전공"},{"icon":"book","title":"TOEIC","period":"2023","description":"자격증"},{"icon":"target","title":"공인중개사 자격 준비","period":2026,"description":"자격증"}],
+    skills: [{"icon":"barChart","title":"데이터 기반 분석 및 해석","description":"실거래 및 입지 데이터를 해석하여 도시와 시장의 흐름을 파악"},{"icon":"pieChart","title":"데이터 시각화","description":"엑셀 기반의 통계자료 정리 및 그래프 시각화를 통한 정보의 명확한 전달"},{"icon":"shield","title":"신뢰 기반 협업","description":"명확한 소통과 일정 준수로 팀원들이 믿고 의지할 수 있는 협업 환경 구성"}],
     storyTitle: "나의 이야기",
-    story: ["저는 기술을 통해 사람들의 삶을 더 편리하고 의미 있게 만드는 일에 열정을 가지고 있습니다.","다양한 프로젝트를 통해 문제 해결 능력과 창의적인 사고를 키워왔으며, 팀원들과의 협업을 통해 함께 성장하는 가치를 배웠습니다.","앞으로도 지속적인 학습과 도전을 통해 더 나은 개발자가 되기 위해 노력하겠습니다."],
-    storyImage: "",
-    hobbies: ["📷 사진 촬영","☕ 카페 투어","🎨 전시회 관람","✈️ 여행","🎯 새 취미","✍️ 글쓰기"]
+    story: ["저는 도시와 시장의 움직임을 함께 보고 싶어 부동산학과 경영학을 공부하고 있습니다. 작은 데이터라도 흐름을 읽어내고 의미를 발견할 때 가장 큰 보람을 느낍니다. 데이터와 논리를 기반으로 현상을 이해하고, 더 나은 의사결정을 위한 관점을 넓혀가는 중입니다.","또한 저는 맡은 일은 끝까지 책임지고 일관된 방식으로 결과를 만들어내는 사람입니다. 팀 프로젝트에서는 의견을 정리하고 흐름을 조율하며 결과물의 완성도를 높이는 역할을 맡아왔습니다. 이러한 안정적인 실행력을 더 넓은 분야에서 발휘하고 싶습니다.","제가 어떤 사람인지 설명하는 가장 좋은 방법은 제가 고민해온 문제들을 직접 보여드리는 것이라고 생각합니다. 이 공간은 그 고민의 흔적을 모아가는 과정입니다.","앞으로는 도시와 시장을 더 정밀하게 이해할 수 있는 분석 역량을 확장하고 이를 실무 의사결정에 활용할 수 있는 전문성을 갖추고자 합니다. 특히 다양한 대외활동과 경험에도 적극적으로 참여하는 것이 목표입니다.","감사합니다."],
+    storyImage: "/uploads/about-image-1764687996017.png",
+    hobbies: ["📷 사진 촬영","☕ 카페 투어","🎨 전시회 관람","✈️ 여행"]
   }
   
   const [aboutInfo, setAboutInfo] = useState(defaultInfo)
@@ -276,7 +276,7 @@ export function About() {
                         </h3>
                         <p className="text-sm text-primary mb-2">
                           <EditableText
-                            value={card.period}
+                            value={String(card.period)}
                             onChange={(value) => updateExperienceCard(index, 'period', value)}
                             storageKey={`about-experience-${index}-period`}
                           />
