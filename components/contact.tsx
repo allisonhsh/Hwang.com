@@ -9,6 +9,7 @@ import { EditableText } from "@/components/editable/editable-text"
 import { EditableBackground } from "@/components/editable/editable-background"
 import { useInlineEditor } from "@/contexts/inline-editor-context"
 import { motion } from "framer-motion"
+import { profile } from "console"
 
 // 사용 가능한 소셜 아이콘 정의
 const AVAILABLE_ICONS = {
@@ -49,10 +50,11 @@ export function Contact() {
     sectionSubtitle: "프로젝트 문의나 협업 제안을 기다리고 있습니다. 편하신 방법으로 연락주세요!",
     qrTitle: "QR 코드로 연락처 저장",
     qrSubtitle: "스캔하면 연락처가 자동으로 저장됩니다",
-    bottomMessage: "함께 성장하는 파트너가 되겠습니다.",
-    bottomSubMessage: "고객님의 성공적인 프로젝트를 위해 최선을 다하겠습니다.",
+    bottomMessage: "맡은 일을 정확하고 일관되게 수행하며 신뢰받는 분석가가 되겠습니다.",
+    bottomSubMessage: "변화하는 환경 속에서도 꾸준히 성장하겠습니다.",
     qrContent: ["name","phone","website"],
     profileEmoji: "👤",
+    profileImage: "/uploads/profile-face.png",
     background: {"image":"","video":"","color":"","opacity":0.1}
   }
   
@@ -248,7 +250,11 @@ export function Contact() {
               <div className="flex items-start gap-6">
                 {/* 프로필 이미지 자리 */}
                 <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-3xl">{contactInfo.profileEmoji || '👤'}</span>
+                  <img
+                    src={contactInfo.profileImage || "/default-profile.png"}
+                    alt="프로필 이미지"
+                    className="w-24 h-24 rounded-full object-cover"
+                  />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-foreground mb-1">

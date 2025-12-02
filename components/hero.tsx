@@ -41,7 +41,7 @@ export function Hero() {
     name: "황성희",
     title: "도시계획부동산학부 학생입니다",
     description: "미래 도시의 방향을 설계하는 부동산 전략가입니다",
-    profileImage: "/uploads/hero-profile-1763371076328.png",
+    profileImage: "/uploads/hero-profile-1764694191839.png",
     backgroundImage: "",
     backgroundVideo: "",
     backgroundOpacity: 0.1,

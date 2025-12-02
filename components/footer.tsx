@@ -24,7 +24,7 @@ export function Footer() {
   const defaultInfo = {
     showFooter: true,
     name: "황성희",
-    description: "당신을 소개하는 짧은 문구를 작성해주세요. ",
+    description: "미래 도시의 방향을 설계하는 부동산 전략가입니다",
     showQuickLinks: true,
     quickLinksTitle: "빠른 링크",
     showContactInfo: true,
