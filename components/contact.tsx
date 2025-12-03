@@ -59,7 +59,13 @@ export function Contact() {
   }
   
   // 소셜 링크 기본값 (배열 형태로 변경)
-  const defaultSocialLinks: { name: string; icon: string; url: string }[] = []
+  const defaultSocialLinks: { name: string; icon: string; url: string }[] = [
+    {
+      "name": "단국대학교",
+      "icon": "globe",
+      "url": "https://www.dankook.ac.kr/web/kor/home"
+    }
+  ]
   
   const [contactInfo, setContactInfo] = useState(defaultInfo)
   const [socialLinks, setSocialLinks] = useState(defaultSocialLinks)

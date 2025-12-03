@@ -1,5 +1,6 @@
 "use client"
 
+import ReactMarkdown from "react-markdown";
 import * as React from "react"
 import { useState, useEffect } from "react"
 import { X, Plus, Upload, ChevronDown, LayoutGrid } from "lucide-react"
@@ -19,7 +20,7 @@ export function Projects() {
     initialDisplay: 6,
     loadMoreCount: 3,
     background: {"image":"","video":"","color":"","opacity":0.1},
-    projects: [{"image":"/uploads/project-0-1764693694689.png","video":"","title":"PF 개발 IM 프로젝트","description":"평택시 동삭동 라움프라자 신축사업의 PF의 개발 IM 작성하였습니다. 대상 사업의 수익률, 분양가, 총사업비 등을 기반으로 사업성 여부를 검토했습니다. 수익성 변동 요인을 비교하며 리스크 요인을 식별했고, 다양한 시나리오별 민감도 분석을 통해 안정적으로 사업이 운영될 수 있는 조건을 도출했습니다."},{"image":"/uploads/project-1763439708666-1763439709685.png","video":"","title":"성수동 임장 보고서","description":"전국 지식산업센터 거래가 급감한 상황에서도 성수 지역은 공실률 0%대와 임대료 상승을 유지해, 그 원인을 파악하기 위해 현장 임장을 진행했습니다.\n입지·상권·개발 호재를 검토하며 수요의 지속성을 분석하고, 역세권 거리·신축 경쟁 등 잠재 리스크까지 종합적으로 평가했습니다."},{"image":"/uploads/project-1763440041749-1763440041909.png","video":"","title":"경매 권리분석 보고서","description":"등기부·권리 순위를 검토해 인수 위험을 판단하고, 대출 조달 구조를 가정해 24개월 보유·매각 시 수익률을 계산했습니다.\n전세 운영 대비 매각 전략이 더 높은 수익성과 유동성을 확보한다는 결론을 도출하며 투자 의사결정안을 제시했습니다."}] as Array<{ image: string; video?: string; title: string; description: string }>
+    projects: [{"image":"/uploads/project-0-1764693694689.png","video":"","title":"PF 개발 IM 프로젝트 - 동삭동 라움프라자","description":"**개요**\n\n복합상업시설 개발사업의 수익성과 리스크를 정량·정성적으로 검토한 IM 보고서입니다. 수요·분양가·총사업비 기반의 재무 분석과 입지 여건 평가를 결합해 사업 타당성을 판단했습니다.\n\n\n**핵심 분석 포인트**\n- 수요 및 배후 상권 규모 산정\n- 임대/분양가 시나리오별 매출 예측\n- 총사업비 구성 및 수익성 민감도 분석\n\n**Insight**\n\n시장 변동성에 따라 수익률 차이가 크게 발생하는 구간을 도출하고, 리스크를 최소화하며 안정적으로 운영될 수 있는 조건을 제시했습니다."},{"image":"/uploads/project-1763439708666-1763439709685.png","video":"","title":"성수동 생각공장 데시앙플렉스 임장 보고서","description":"**개요**\n\n성수 지식산업센터 시장의 공실률 0%대 원인을 파악하기 위해 현장 임장을 수행한 보고서입니다.   입지·상권 동향·개발 호재를 종합적으로 검토해 수요 지속성과 투자 적정성을 분석했습니다.\n\n**핵심 분석 포인트**\n- 입지 조건(역세권·주변 상권·업무밀집도) 평가 \n- 기존·신축 지식산업센터 경쟁 구도 분석\n- 개발 계획 및 확장 가능성 검토  \n\n**Insight**\n\n실제 공간 환경과 시장 데이터를 결합해 향후 공급 증가에도 경쟁력을 유지할 수 있는 요소를 명확히 도출했습니다."},{"image":"/uploads/project-1763440041749-1763440041909.png","video":"","title":"경매 권리분석 보고서","description":"**개요**\n\n등기부와 권리 순위 기반으로 인수 위험을 검토하고,  \n투자 시나리오별 수익성을 비교한 권리분석 보고서입니다.\n\n**핵심 분석 포인트**\n- 등기부·권리관계 검토 및 인수 위험 판단  \n- 24개월 보유·매각·전세 운영 전략 비교  \n- 대출 조달 구조 및 자본수익률 추정  \n\n**Insight**\n\n전세 운영 대비 매각 전략의 수익성과 리스크 차이를 명확히 수치화해   투자 의사결정의 근거를 제시했습니다."}] as Array<{ image: string; video?: string; title: string; description: string }>
   }
 
   const [projectsInfo, setProjectsInfo] = useState(defaultInfo)
@@ -279,71 +280,114 @@ export function Projects() {
                       )}
                     </div>
                     
-                    {/* 텍스트 영역 */}
-                    <div className="flex-grow">
-                      <h3 className="font-semibold text-foreground mb-1">
-                        <EditableText
-                          value={project.title || "프로젝트 제목"}
-                          onChange={(value) => updateProject(index, 'title', value)}
-                          storageKey={`project-${index}-title`}
-                        />
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        <EditableText
-                          value={project.description || "프로젝트 설명"}
-                          onChange={(value) => updateProject(index, 'description', value)}
-                          storageKey={`project-${index}-description`}
-                          multiline
-                        />
-                      </p>
-                    </div>
-{/* 🔗 PDF 링크 */}
+{/* 텍스트 영역 */}
+<div className="flex-grow">
+  <h3 className="font-semibold text-foreground mb-1">
+    <EditableText
+      value={project.title || "프로젝트 제목"}
+      onChange={(value) => updateProject(index, "title", value)}
+      storageKey={`project-${index}-title`}
+    />
+  </h3>
+
+  {/* 설명 영역 */}
+  {isEditMode ? (
+    <EditableText
+      value={project.description || "프로젝트 설명"}
+      onChange={(value) => updateProject(index, "description", value)}
+      storageKey={`project-${index}-description`}
+      multiline
+      className="text-sm text-muted-foreground whitespace-pre-line"
+    />
+  ) : (
+    <div className="text-sm text-muted-foreground">
+      <ReactMarkdown
+        skipHtml={false}
+        components={{
+          p: ({ children }) => (
+            <p className="mb-3 leading-relaxed">{children}</p>
+          ),
+          strong: ({ children }) => (
+            <strong className="font-semibold">{children}</strong>
+          ),
+          ul: ({ children }) => (
+            <ul className="list-disc ml-5 mb-3">{children}</ul>
+          ),
+          li: ({ children }) => <li className="mb-1">{children}</li>,
+        }}
+      >
+        {project.description?.replace(/\r?\n/g, "\n") ?? ""}
+      </ReactMarkdown>
+    </div>
+  )}
+</div>
+
+       
+
+{/* PDF 링크 영역 */}
 {index === 0 && (
-  <div className="mt-2 space-y-1">
+  <div className="mt-2 flex flex-col gap-1 w-fit">
     <a
       href="/uploads/pf-report.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-primary underline text-sm block"
+      className="inline-flex w-fit items-center gap-2 px-3 py-1 text-xs rounded-full 
+                 border border-muted-foreground/20 bg-white hover:bg-muted/30 
+                 text-foreground transition whitespace-nowrap"
     >
-      PF 보고서 열기 (1)
+      📄 PF 보고서 열기 (1)
     </a>
+
     <a
       href="/uploads/pf-report-2.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-primary underline text-sm block"
+      className="inline-flex w-fit items-center gap-2 px-3 py-1 text-xs rounded-full 
+                 border border-muted-foreground/20 bg-white hover:bg-muted/30 
+                 text-foreground transition whitespace-nowrap"
     >
-      PF 보고서 열기 (2)
+      📄 PF 보고서 열기 (2)
     </a>
   </div>
 )}
 
+
 {index === 1 && (
-  <a
-    href="/uploads/seongsu-report.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-primary underline text-sm mt-2 inline-block"
-  >
-    임장 보고서 열기
-  </a>
+  <div className="mt-2 w-fit">
+    <a
+      href="/uploads/seongsu-report.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex w-fit items-center gap-2 px-3 py-1 text-xs rounded-full border border-muted-foreground/20 
+                 bg-white hover:bg-muted/30 text-foreground transition whitespace-nowrap"
+    >
+      🗺️ 임장 보고서 열기
+    </a>
+  </div>
 )}
 
 {index === 2 && (
-  <a
-    href="/uploads/auction-report.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-primary underline text-sm mt-2 inline-block"
-  >
-    권리분석 보고서 열기
-  </a>
+  <div className="mt-2 w-fit">
+    <a
+      href="/uploads/auction-report.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex w-fit items-center gap-2 px-3 py-1 text-xs rounded-full border border-muted-foreground/20 
+                 bg-white hover:bg-muted/30 text-foreground transition whitespace-nowrap"
+    >
+      🏠 권리분석 보고서 열기
+    </a>
+  </div>
 )}
+
+
+
+
 
                   </motion.div>
                 )
               })}
+            
               
               {/* 편집 버튼 */}
               {isEditMode && (

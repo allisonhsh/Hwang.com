@@ -39,8 +39,8 @@ export function Hero() {
   const defaultInfo = {
     greeting: "반갑습니다,",
     name: "황성희",
-    title: "도시계획부동산학부 학생입니다",
-    description: "미래 도시의 방향을 설계하는 부동산 전략가입니다",
+    title: "도시와 시장의 흐름을 데이터로 해석합니다.",
+    description: "분석을 통해 더 나은 판단과 전략을 만드는 사람입니다.",
     profileImage: "/uploads/hero-profile-1764694191839.png",
     backgroundImage: "",
     backgroundVideo: "",
