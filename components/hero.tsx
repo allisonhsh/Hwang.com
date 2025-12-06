@@ -37,10 +37,10 @@ export function Hero() {
   const defaultSocialLinks = [{"name":"단국대학교","icon":"instagram","url":"https://www.instagram.com/dankook_univ/"},{"name":"KB부동산","icon":"globe","url":"https://kbland.kr/map?xy=37.5205559,126.9265729,17"}]
   
   const defaultInfo = {
-    greeting: "반갑습니다,",
+    greeting: "반갑습니다!",
     name: "황성희",
-    title: "도시와 시장의 흐름을 데이터로 해석합니다.",
-    description: "분석을 통해 더 나은 판단과 전략을 만드는 사람입니다.",
+    title: "단국대학교 도시계획부동산학부 3학년",
+    description: "도시와 시장의 '흐름'을 '데이터'로 해석합니다.",
     profileImage: "/uploads/hero-profile-1764694191839.png",
     backgroundImage: "",
     backgroundVideo: "",

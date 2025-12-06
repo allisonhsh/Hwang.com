@@ -20,7 +20,7 @@ export function Projects() {
     initialDisplay: 6,
     loadMoreCount: 3,
     background: {"image":"","video":"","color":"","opacity":0.1},
-    projects: [{"image":"/uploads/project-0-1764693694689.png","video":"","title":"PF 개발 IM 프로젝트 - 동삭동 라움프라자","description":"**개요**\n\n복합상업시설 개발사업의 수익성과 리스크를 정량·정성적으로 검토한 IM 보고서입니다. 수요·분양가·총사업비 기반의 재무 분석과 입지 여건 평가를 결합해 사업 타당성을 판단했습니다.\n\n\n**핵심 분석 포인트**\n- 수요 및 배후 상권 규모 산정\n- 임대/분양가 시나리오별 매출 예측\n- 총사업비 구성 및 수익성 민감도 분석\n\n**Insight**\n\n시장 변동성에 따라 수익률 차이가 크게 발생하는 구간을 도출하고, 리스크를 최소화하며 안정적으로 운영될 수 있는 조건을 제시했습니다."},{"image":"/uploads/project-1763439708666-1763439709685.png","video":"","title":"성수동 생각공장 데시앙플렉스 임장 보고서","description":"**개요**\n\n성수 지식산업센터 시장의 공실률 0%대 원인을 파악하기 위해 현장 임장을 수행한 보고서입니다.   입지·상권 동향·개발 호재를 종합적으로 검토해 수요 지속성과 투자 적정성을 분석했습니다.\n\n**핵심 분석 포인트**\n- 입지 조건(역세권·주변 상권·업무밀집도) 평가 \n- 기존·신축 지식산업센터 경쟁 구도 분석\n- 개발 계획 및 확장 가능성 검토  \n\n**Insight**\n\n실제 공간 환경과 시장 데이터를 결합해 향후 공급 증가에도 경쟁력을 유지할 수 있는 요소를 명확히 도출했습니다."},{"image":"/uploads/project-1763440041749-1763440041909.png","video":"","title":"경매 권리분석 보고서","description":"**개요**\n\n등기부와 권리 순위 기반으로 인수 위험을 검토하고,  \n투자 시나리오별 수익성을 비교한 권리분석 보고서입니다.\n\n**핵심 분석 포인트**\n- 등기부·권리관계 검토 및 인수 위험 판단  \n- 24개월 보유·매각·전세 운영 전략 비교  \n- 대출 조달 구조 및 자본수익률 추정  \n\n**Insight**\n\n전세 운영 대비 매각 전략의 수익성과 리스크 차이를 명확히 수치화해   투자 의사결정의 근거를 제시했습니다."}] as Array<{ image: string; video?: string; title: string; description: string }>
+    projects: [{"image":"/uploads/project-0-1764693694689.png","video":"","title":"PF 개발 IM 프로젝트 - 동삭동 라움프라자","description":"**개요**\n\n복합상업시설 개발사업의 수익성과 리스크를 정량·정성적으로 검토한 IM 보고서입니다. 수요·분양가·총사업비 기반의 재무 분석과 입지 여건 평가를 결합해 사업 타당성을 판단했습니다.\n\n\n**핵심 분석 포인트**\n- 수요 및 배후 상권 규모 산정\n- 임대/분양가 시나리오별 매출 예측\n- 총사업비 구성 및 수익성 민감도 분석\n\n**Insight**\n\n시장 변동성에 따라 수익률 차이가 크게 발생하는 구간을 도출하고, 리스크를 최소화하며 안정적으로 운영될 수 있는 조건을 제시했습니다."},{"image":"/uploads/project-1763439708666-1763439709685.png","video":"","title":"성수동 생각공장 데시앙플렉스 임장 보고서","description":"**개요**\n\n성수 지식산업센터 시장의 공실률 0%대 원인을 파악하기 위해 현장 임장을 수행한 보고서입니다.   입지·상권 동향·개발 호재를 종합적으로 검토해 수요 지속성과 투자 적정성을 분석했습니다.\n\n**핵심 분석 포인트**\n- 입지 조건(역세권·주변 상권·업무밀집도) 평가 \n- 기존·신축 지식산업센터 경쟁 구도 분석\n- 개발 계획 및 확장 가능성 검토  \n\n**Insight**\n\n실제 공간 환경과 시장 데이터를 결합해 향후 공급 증가에도 경쟁력을 유지할 수 있는 요소를 명확히 도출했습니다."},{"image":"/uploads/project-1763440041749-1763440041909.png","video":"","title":"경매 권리분석 보고서","description":"**개요**\n\n등기부와 권리 순위 기반으로 인수 위험을 검토하고,  \n투자 시나리오별 수익성을 비교한 권리분석 보고서입니다.\n\n**핵심 분석 포인트**\n- 등기부·권리관계 검토 및 인수 위험 판단  \n- 24개월 보유·매각·전세 운영 전략 비교  \n- 대출 조달 구조 및 자본수익률 추정  \n\n**Insight**\n\n전세 운영 대비 매각 전략의 수익성과 리스크 차이를 명확히 수치화해   투자 의사결정의 근거를 제시했습니다."},{"image":"/uploads/project-1764999241200-1764999241441.png","video":"","title":"부동산 분야에서의 AI활용 사례","description":"**개요**\n\n부동산 산업에서의 AI 도입 배경과 주요 활용 사례(직방·국토부·KB부동산)를 정리한 발표자료입니다. 가치평가, 거래감시, 사용자 서비스까지 AI가 가져온 변화를 분석했습니다.\n\n**핵심 분석 포인트**\n- 직방 RED의 AVM·NLP 기반 분석\n- 국토부의 GEO-AI·이상거래 탐지 시스템\n- KB부동산의 AI 매물 추천 서비스\n\n**Insight**\n\nAI는 부동산의 정보 분석, 평가, 감시, 서비스 등 전 과정을 고도화하며 산업 패러다임을 변화시키고 있습니다."},{"image":"/uploads/project-1764999308558-1764999308594.png","video":"","title":"도시 확장 과정에서 용도지역제의 한계와 개선방안","description":"**개요**\n\n도시 확장 과정에서 발생한 외곽 난개발·도심 정체 문제를 중심으로 현행 용도지역제의 구조적 한계를 분석한 정책·계획 레포트입니다. 도시 외곽과 도심의 토지이용 불균형을 검토하고, 제도적 개선 방향을 정량적으로 제시했습니다.\n\n**핵심 분석 포인트**\n- 외곽 난개발과 기반시설 부족 문제 진단\n- 도심 규제와 경직성으로 인한 개발 정체 분석\n- 용도지역 변경 절차 및 제도 운영상의 한계 파악\n\n**Insight**\n\n도시 불균형의 핵심 원인을 용도지역제의 경직성에서 찾고, 계획적 외곽 개발·규제 완화·제도 투명성 강화 등 지속가능한 도시관리 방향을 제안했습니다."}] as Array<{ image: string; video?: string; title: string; description: string }>
   }
 
   const [projectsInfo, setProjectsInfo] = useState(defaultInfo)
@@ -230,20 +230,27 @@ export function Projects() {
               <p className="text-xl text-muted-foreground">준비 중입니다</p>
             </div>
           ) : (
-            /* 프로젝트 그리드 */
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {visibleProjects.map((project, index) => {
-                
-                return (
-                  <motion.div 
-                    key={index}
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="group flex flex-col relative cursor-pointer"
-                    onClick={() => !isEditMode && setSelectedImage(project.video || project.image)}
-                  >
+            
+
+/* 프로젝트 그리드 */
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {visibleProjects.map((project, index) => {
+    return (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className="group flex flex-col relative cursor-pointer"
+        onClick={() =>
+          !isEditMode && setSelectedImage(project.video || project.image)
+        }
+      >
+
+
+
+
                     {isEditMode && (
                       <button
                         onClick={(e) => {
@@ -379,6 +386,36 @@ export function Projects() {
     </a>
   </div>
 )}
+
+{index === 3 && (
+  <div className="mt-2 w-fit">
+    <a
+      href="/uploads/ai-report.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex w-fit items-center gap-2 px-3 py-1 text-xs rounded-full border border-muted-foreground/20 
+                 bg-white hover:bg-muted/30 text-foreground transition whitespace-nowrap"
+    >
+      🤖 AI 활용 보고서 열기
+    </a>
+  </div>
+)}
+
+
+{index === 4 && (
+  <div className="mt-2 w-fit">
+    <a
+      href="/uploads/zoning-district-report.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex w-fit items-center gap-2 px-3 py-1 text-xs rounded-full border border-muted-foreground/20 
+                 bg-white hover:bg-muted/30 text-foreground transition whitespace-nowrap"
+    >
+      🏙️ 용도지역제 리포트 열기
+    </a>
+  </div>
+)}
+
 
 
 
