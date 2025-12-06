@@ -1,5 +1,6 @@
 "use client"
 
+import HorizontalBarChart from "@/components/HorizontalBarChart"
 import * as React from "react"
 import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
@@ -374,6 +375,23 @@ export function About() {
               </div>
             </div>
           )}
+
+
+
+          {/* 역량 시각화 차트 */}
+<section className="py-24">
+  <div className="max-w-5xl mx-auto px-6">
+    <div className="bg-white/90 backdrop-blur-md shadow-2xl rounded-2xl p-12">
+      <h2 className="text-3xl font-bold text-center mb-12">
+        역량 시각화 (Skill Radar)
+      </h2>
+
+      <HorizontalBarChart />
+    </div>
+  </div>
+</section>
+
+
 
           {/* 자기소개 상세 */}
           {(aboutInfo.story.length > 0 || isEditMode) && (

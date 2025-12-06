@@ -23,7 +23,7 @@ export function cleanupInvalidImages() {
       const imageFields = ['profileImage', 'backgroundImage', 'image', 'avatar', 'photo']
       
       imageFields.forEach(field => {
-        if (parsed[field] && parsed[field].includes('/uploads/')) {
+        if (parsed[field] && typeof parsed[field] === "string" && parsed[field].includes('/uploads/')) {
           // 이미지 존재 여부 확인
           const img = new Image()
           img.onerror = () => {

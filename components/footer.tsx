@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import { EditableText } from "@/components/editable/editable-text"
 import { useInlineEditor } from "@/contexts/inline-editor-context"
 
-export function Footer() {
+  export default function Footer() {
   const { getData, saveData, isEditMode, saveToFile } = useInlineEditor()
   const currentYear = new Date().getFullYear()
   
